@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Court extends Model
+class Booking extends Model
+
 {
     use HasFactory, SoftDeletes;
 
@@ -43,7 +44,7 @@ class Court extends Model
 
     public function reviews()
     {
-        return $this->hasMany(CourtReview::class);
+        return $this->hasMany(VenueReview::class);
     }
 
     public function getAverageRatingAttribute()

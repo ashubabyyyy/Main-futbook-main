@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>Welcome to FutsalBook Pro</h1>
-            <p>Your premier futsal court booking and management platform. Book courts, manage tournaments, and track your games.</p>
+            <h1>Welcome to FutBook</h1>
+            <p>Your premier futsal Venue booking and management platform. Book Venues, manage tournaments, and track your games.</p>
         </div>
     </div>
 </div>
@@ -68,10 +68,10 @@
             <div class="mb-3">
                 <label for="courtSelect" class="form-label">Select Court</label>
                 <select class="form-select" id="courtSelect" required>
-                    <option value="">Choose a court...</option>
-                    <option value="court-a">Court A - Premium</option>
-                    <option value="court-b">Court B - Standard</option>
-                    <option value="court-c">Court C - Training</option>
+                    <option value="">Choose a Venue...</option>
+                    <option value="venue-a">Venue A - Premium</option>
+                    <option value="venue-b">Venue B - Standard</option>
+                    <option value="venue-c">Venue C - Training</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -109,15 +109,15 @@
 <!-- Mobile Navigation Menu -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
     <div class="offcanvas-header justify-content-between">
-        <h4 class="fw-normal text-uppercase fs-6">FutsalBook Menu</h4>
+        <h4 class="fw-normal text-uppercase fs-6">FutBook Menu</h4>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
             <li class="nav-item border-dashed active">
-                <a href="{{ route('courts.index') }}" class="nav-link d-flex align-items-center gap-3 text-dark p-2">
+                <a href="{{ route('venues.index') }}" class="nav-link d-flex align-items-center gap-3 text-dark p-2">
                     <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#court"></use></svg>
-                    <span>Browse Courts</span>
+                    <span>Browse Venues</span>
                 </a>
             </li>
             <li class="nav-item border-dashed">
@@ -169,10 +169,10 @@
     <div class="container-lg">
         <div class="row">
             <div class="col-lg-6 pt-5 mt-5">
-                <h2 class="display-1 ls-1"><span class="fw-bold text-success">Premium</span> Futsal Courts at your <span class="fw-bold">Fingertips</span></h2>
+                <h2 class="display-1 ls-1"><span class="fw-bold text-success">Premium</span> Futsal Venues at your <span class="fw-bold">Fingertips</span></h2>
                 <p class="fs-4">Book instantly, play immediately.</p>
                 <div class="d-flex gap-3">
-                    <a href="{{ route('courts.index') }}" class="btn btn-success text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Book Now</a>
+                    <a href="{{ route('venue.index') }}" class="btn btn-success text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Book Now</a>
                     <a href="{{ route('tournaments.index') }}" class="btn btn-dark text-uppercase fs-6 rounded-pill px-4 py-3 mt-3">Join Tournament</a>
                 </div>
                 <div class="row my-5">
@@ -222,8 +222,8 @@
                         </div>
                         <div class="col-md-9">
                             <div class="card-body p-0">
-                                <h5 class="text-light">Premium Courts</h5>
-                                <p class="card-text">Professional-grade futsal courts with modern facilities.</p>
+                                <h5 class="text-light">Premium Venues</h5>
+                                <p class="card-text">Professional-grade futsal venues with modern facilities.</p>
                             </div>
                         </div>
                     </div>
@@ -254,9 +254,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-header d-flex flex-wrap justify-content-between mb-5">
-                    <h2 class="section-title">Court Categories</h2>
+                    <h2 class="section-title">Venue Categories</h2>
                     <div class="d-flex align-items-center">
-                        <a href="{{ route('courts.index') }}" class="btn btn-success me-2">View All Courts</a>
+                        <a href="{{ route('venues.index') }}" class="btn btn-success me-2">View All Venues</a>
                         <div class="swiper-buttons">
                             <button class="swiper-prev category-carousel-prev btn btn-outline-success">❮</button>
                             <button class="swiper-next category-carousel-next btn btn-outline-success">❯</button>
@@ -269,25 +269,25 @@
             <div class="col-md-12">
                 <div class="category-carousel swiper">
                     <div class="swiper-wrapper">
-                        <a href="{{ route('courts.category', 'premium') }}" class="nav-link swiper-slide text-center">
-                            <img src="{{ asset('frontend-assets/images/court-premium.jpg') }}" class="rounded-circle" alt="Premium Courts">
-                            <h4 class="fs-6 mt-3 fw-normal category-title">Premium Courts</h4>
+                        <a href="{{ route('venues.category', 'premium') }}" class="nav-link swiper-slide text-center">
+                            <img src="{{ asset('frontend-assets/images/court-premium.jpg') }}" class="rounded-circle" alt="Premium Venues">
+                            <h4 class="fs-6 mt-3 fw-normal category-title">Premium Venues</h4>
                         </a>
-                        <a href="{{ route('courts.category', 'standard') }}" class="nav-link swiper-slide text-center">
-                            <img src="{{ asset('frontend-assets/images/court-standard.jpg') }}" class="rounded-circle" alt="Standard Courts">
-                            <h4 class="fs-6 mt-3 fw-normal category-title">Standard Courts</h4>
+                        <a href="{{ route('Venues.category', 'standard') }}" class="nav-link swiper-slide text-center">
+                            <img src="{{ asset('frontend-assets/images/venue-standard.jpg') }}" class="rounded-circle" alt="Standard Venues">
+                            <h4 class="fs-6 mt-3 fw-normal category-title">Standard Venues</h4>
                         </a>
-                        <a href="{{ route('courts.category', 'training') }}" class="nav-link swiper-slide text-center">
-                            <img src="{{ asset('frontend-assets/images/court-training.jpg') }}" class="rounded-circle" alt="Training Courts">
-                            <h4 class="fs-6 mt-3 fw-normal category-title">Training Courts</h4>
+                        <a href="{{ route('venues.category', 'training') }}" class="nav-link swiper-slide text-center">
+                            <img src="{{ asset('frontend-assets/images/venue-training.jpg') }}" class="rounded-circle" alt="Training Venues">
+                            <h4 class="fs-6 mt-3 fw-normal category-title">Training Venues</h4>
                         </a>
-                        <a href="{{ route('courts.category', 'indoor') }}" class="nav-link swiper-slide text-center">
-                            <img src="{{ asset('frontend-assets/images/court-indoor.jpg') }}" class="rounded-circle" alt="Indoor Courts">
-                            <h4 class="fs-6 mt-3 fw-normal category-title">Indoor Courts</h4>
+                        <a href="{{ route('venues.category', 'indoor') }}" class="nav-link swiper-slide text-center">
+                            <img src="{{ asset('frontend-assets/images/venue-indoor.jpg') }}" class="rounded-circle" alt="Indoor Venues">
+                            <h4 class="fs-6 mt-3 fw-normal category-title">Indoor Venues</h4>
                         </a>
-                        <a href="{{ route('courts.category', 'outdoor') }}" class="nav-link swiper-slide text-center">
-                            <img src="{{ asset('frontend-assets/images/court-outdoor.jpg') }}" class="rounded-circle" alt="Outdoor Courts">
-                            <h4 class="fs-6 mt-3 fw-normal category-title">Outdoor Courts</h4>
+                        <a href="{{ route('venues.category', 'outdoor') }}" class="nav-link swiper-slide text-center">
+                            <img src="{{ asset('frontend-assets/images/venue-outdoor.jpg') }}" class="rounded-circle" alt="Outdoor Venues">
+                            <h4 class="fs-6 mt-3 fw-normal category-title">Outdoor Venues</h4>
                         </a>
                     </div>
                 </div>
@@ -296,15 +296,15 @@
     </div>
 </section>
 
-<!-- Available Courts Section -->
+<!-- Available Venues Section -->
 <section class="pb-5">
     <div class="container-lg">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-header d-flex flex-wrap justify-content-between my-4">
-                    <h2 class="section-title">Available Courts Today</h2>
+                    <h2 class="section-title">Available Venues Today</h2>
                     <div class="d-flex align-items-center">
-                        <a href="{{ route('courts.index') }}" class="btn btn-success rounded-1">View All</a>
+                        <a href="{{ route('venues.index') }}" class="btn btn-success rounded-1">View All</a>
                     </div>
                 </div>
             </div>
@@ -312,14 +312,14 @@
         
         <div class="row">
             <div class="col-md-12">
-                <div class="court-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+                <div class="venue-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
                     
-                    <!-- Court Card 1 -->
+                    <!-- Venue Card 1 -->
                     <div class="col">
-                        <div class="court-item card h-100">
-                            <img src="{{ asset('frontend-assets/images/court-1.jpg') }}" class="card-img-top" alt="Court A">
+                        <div class="Venue-item card h-100">
+                            <img src="{{ asset('frontend-assets/images/venue-1.jpg') }}" class="card-img-top" alt="Venue A">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Court A - Premium</h5>
+                                <h5 class="card-title">Venue A - Premium</h5>
                                 <div class="mb-2">
                                     <span class="rating">
                                         <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
@@ -330,15 +330,15 @@
                                     </span>
                                     <span class="text-muted">(45 reviews)</span>
                                 </div>
-                                <p class="card-text">Professional futsal court with premium artificial turf and LED lighting.</p>
+                                <p class="card-text">Professional futsal venue with premium artificial turf and LED lighting.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <span class="text-success fw-bold fs-5">$30/hour</span>
                                         <span class="badge bg-success">Available</span>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <a href="{{ route('courts.show', 1) }}" class="btn btn-outline-success">View Details</a>
-                                        <a href="{{ route('bookings.create', ['court' => 1]) }}" class="btn btn-success">Book Now</a>
+                                        <a href="{{ route('venues.show', 1) }}" class="btn btn-outline-success">View Details</a>
+                                        <a href="{{ route('bookings.create', ['venue' => 1]) }}" class="btn btn-success">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -350,7 +350,7 @@
                         <div class="court-item card h-100">
                             <img src="{{ asset('frontend-assets/images/court-2.jpg') }}" class="card-img-top" alt="Court B">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Court B - Standard</h5>
+                                <h5 class="card-title">Venue B - Standard</h5>
                                 <div class="mb-2">
                                     <span class="rating">
                                         <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
@@ -361,15 +361,15 @@
                                     </span>
                                     <span class="text-muted">(32 reviews)</span>
                                 </div>
-                                <p class="card-text">Standard futsal court perfect for casual games and training sessions.</p>
+                                <p class="card-text">Standard futsal venue perfect for casual games and training sessions.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <span class="text-success fw-bold fs-5">$25/hour</span>
                                         <span class="badge bg-success">Available</span>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <a href="{{ route('courts.show', 2) }}" class="btn btn-outline-success">View Details</a>
-                                        <a href="{{ route('bookings.create', ['court' => 2]) }}" class="btn btn-success">Book Now</a>
+                                        <a href="{{ route('venues.show', 2) }}" class="btn btn-outline-success">View Details</a>
+                                        <a href="{{ route('bookings.create', ['venue' => 2]) }}" class="btn btn-success">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -378,10 +378,10 @@
 
                     <!-- Court Card 3 -->
                     <div class="col">
-                        <div class="court-item card h-100">
-                            <img src="{{ asset('frontend-assets/images/court-3.jpg') }}" class="card-img-top" alt="Court C">
+                        <div class="venue-item card h-100">
+                            <img src="{{ asset('frontend-assets/images/venue-3.jpg') }}" class="card-img-top" alt="Venue C">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Court C - Training</h5>
+                                <h5 class="card-title">Venue C - Training</h5>
                                 <div class="mb-2">
                                     <span class="rating">
                                         <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
@@ -399,7 +399,7 @@
                                         <span class="badge bg-warning text-dark">Busy</span>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <a href="{{ route('courts.show', 3) }}" class="btn btn-outline-success">View Details</a>
+                                        <a href="{{ route('venues.show', 3) }}" class="btn btn-outline-success">View Details</a>
                                         <a href="{{ route('bookings.create', ['court' => 3]) }}" class="btn btn-success">Book Now</a>
                                     </div>
                                 </div>
@@ -409,10 +409,10 @@
 
                     <!-- Court Card 4 -->
                     <div class="col">
-                        <div class="court-item card h-100">
-                            <img src="{{ asset('frontend-assets/images/court-4.jpg') }}" class="card-img-top" alt="Court D">
+                        <div class="venue-item card h-100">
+                            <img src="{{ asset('frontend-assets/images/venue-4.jpg') }}" class="card-img-top" alt="Venue D">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Court D - Indoor</h5>
+                                <h5 class="card-title">Venue D - Indoor</h5>
                                 <div class="mb-2">
                                     <span class="rating">
                                         <svg width="18" height="18" class="text-warning"><use xlink:href="#star-full"></use></svg>
@@ -618,8 +618,8 @@
                             <svg width="20" height="20"><use xlink:href="#booking"></use></svg>
                         </div>
                         <div class="activity-content flex-grow-1">
-                            <h6 class="mb-1">Team Alpha booked Court A</h6>
-                            <small class="text-muted">Premium court for 2 hours • 5 minutes ago</small>
+                            <h6 class="mb-1">Team Alpha booked Venue A</h6>
+                            <small class="text-muted">Premium venue for 2 hours • 5 minutes ago</small>
                         </div>
                         <span class="badge bg-success">$60</span>
                     </div>
@@ -639,7 +639,7 @@
                         </div>
                         <div class="activity-content flex-grow-1">
                             <h6 class="mb-1">Lightning FC completed their training session</h6>
-                            <small class="text-muted">Court C training session • 1 hour ago</small>
+                            <small class="text-muted">Venue C training session • 1 hour ago</small>
                         </div>
                         <span class="badge bg-warning text-dark">Training</span>
                     </div>
@@ -690,7 +690,7 @@
                     <div class="card-body">
                         <div class="post-meta d-flex text-uppercase gap-3 my-2 align-items-center">
                             <div class="meta-date"><svg width="16" height="16"><use xlink:href="#calendar"></use></svg>{{ date('d M Y', strtotime('-2 days')) }}</div>
-                            <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#court"></use></svg>Facilities</div>
+                            <div class="meta-categories"><svg width="16" height="16"><use xlink:href="#venue"></use></svg>Facilities</div>
                         </div>
                         <div class="post-header">
                             <h3 class="post-title">
@@ -733,15 +733,15 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-4">
-                        <h2 class="mt-5 text-white">Download FutsalBook App</h2>
-                        <p class="text-white">Book courts on the go, manage your games, and stay connected with your team.</p>
+                        <h2 class="mt-5 text-white">Download FutBook App</h2>
+                        <p class="text-white">Book venues on the go, manage your games, and stay connected with your team.</p>
                         <div class="d-flex gap-2 flex-wrap mb-5">
                             <a href="#" title="App store"><img src="{{ asset('frontend-assets/images/app-store.png') }}" alt="app-store"></a>
                             <a href="#" title="Google Play"><img src="{{ asset('frontend-assets/images/google-play.png') }}" alt="google-play"></a>
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <img src="{{ asset('frontend-assets/images/futsal-app-mockup.png') }}" alt="phone" class="img-fluid">
+                        <img src="{{ asset('frontend-assets/images/futBook-app-mockup.png') }}" alt="phone" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -753,8 +753,8 @@
 <section class="py-4">
     <div class="container-lg">
         <h2 class="my-4">Popular Searches</h2>
-        <a href="{{ route('courts.search', 'premium-courts') }}" class="btn btn-outline-success me-2 mb-2">Premium Courts</a>
-        <a href="{{ route('courts.search', 'indoor-futsal') }}" class="btn btn-outline-success me-2 mb-2">Indoor Futsal Courts</a>
+        <a href="{{ route('courts.search', 'premium-venues') }}" class="btn btn-outline-success me-2 mb-2">Premium Courts</a>
+        <a href="{{ route('courts.search', 'indoor-fuBook') }}" class="btn btn-outline-success me-2 mb-2">Indoor FutBook Courts</a>
         <a href="{{ route('courts.search', 'weekend-booking') }}" class="btn btn-outline-success me-2 mb-2">Weekend Booking</a>
         <a href="{{ route('tournaments.search', 'summer-championship') }}" class="btn btn-outline-success me-2 mb-2">Summer Championship</a>
         <a href="{{ route('coaching.search', 'youth-training') }}" class="btn btn-outline-success me-2 mb-2">Youth Training</a>
@@ -776,18 +776,18 @@
                     </div>
                     <div class="card-body p-0">
                         <h5>Instant Booking</h5>
-                        <p class="card-text">Book your court instantly with real-time availability checking.</p>
+                        <p class="card-text">Book your venue instantly with real-time availability checking.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-3 border border-success p-3">
                     <div class="text-success mb-3">
-                        <svg width="32" height="32"><use xlink:href="#court"></use></svg>
+                        <svg width="32" height="32"><use xlink:href="#venue"></use></svg>
                     </div>
                     <div class="card-body p-0">
                         <h5>Premium Facilities</h5>
-                        <p class="card-text">Professional-grade courts with modern amenities and equipment.</p>
+                        <p class="card-text">Professional-grade venues with modern amenities and equipment.</p>
                     </div>
                 </div>
             </div>

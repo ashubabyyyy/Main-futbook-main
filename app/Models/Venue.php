@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-//use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Venue extends Model
 {
-    use HasFactory; 
+    use HasFactory;
 
     protected $fillable = [
         'name',
@@ -31,11 +30,6 @@ class Venue extends Model
         'hourly_rate' => 'decimal:2'
     ];
 
-    public function venue()
-    {
-        return $this->belongsTo(Venue::class);
-    }
-
     public function bookings()
     {
         return $this->hasMany(Booking::class);
@@ -43,7 +37,7 @@ class Venue extends Model
 
     public function reviews()
     {
-        return $this->hasMany(CourtReview::class);
+        return $this->hasMany(Review::class); // ✅ Corrected
     }
 
     public function getAverageRatingAttribute()
@@ -51,7 +45,7 @@ class Venue extends Model
         return $this->reviews()->avg('rating') ?? 0;
     }
 
-    public function getReviewCountAttribute()
+    public function getReviewVenueAttribute()
     {
         return $this->reviews()->count();
     }

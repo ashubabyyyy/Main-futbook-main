@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\CoachingController;
 use App\Http\Controllers\Frontend\NewsController;
 use App\Http\Controllers\Frontend\MembershipController;
 use App\Http\Controllers\Frontend\NewsletterController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,3 +96,8 @@ Route::prefix('api')->name('api.')->group(function () {
     Route::get('/courts/availability', [CourtController::class, 'checkAvailability'])->name('courts.availability');
     Route::post('/bookings/quick', [BookingController::class, 'quickBook'])->name('bookings.quick');
 });
+Route::get('/contact', function () {
+    return view('contact'); 
+})->name('contact.form');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

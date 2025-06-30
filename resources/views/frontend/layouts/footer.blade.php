@@ -39,25 +39,19 @@
 
           <div class="col-md-2 col-sm-6">
             <div class="footer-menu">
-              <h5 class="widget-title">Organic</h5>
+              <h5 class="widget-title">FutBook</h5>
               <ul class="menu-list list-unstyled">
                 <li class="menu-item">
                   <a href="#" class="nav-link">About us</a>
                 </li>
                 <li class="menu-item">
-                  <a href="#" class="nav-link">Conditions </a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Our Journals</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Careers</a>
-                </li>
-                <li class="menu-item">
                   <a href="#" class="nav-link">Affiliate Programme</a>
                 </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Ultras Press</a>
+                 <li class="menu-item">
+                  <a href="#" class="nav-link">Blogs</a>
+                  <li class="menu-item">
+                  <a href="#" class="nav-link">Events&Tournaments</a>
+
                 </li>
               </ul>
             </div>
@@ -72,14 +66,7 @@
                 <li class="menu-item">
                   <a href="#" class="nav-link">Discount Coupons</a>
                 </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Stores</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Track Order</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Shop</a>
+                
                 </li>
                 <li class="menu-item">
                   <a href="#" class="nav-link">Info</a>
@@ -106,8 +93,7 @@
                 <li class="menu-item">
                   <a href="#" class="nav-link">Cookie Guidelines</a>
                 </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Delivery Information</a>
+                
                 </li>
               </ul>
             </div>
@@ -130,12 +116,9 @@
       <div class="container-lg">
         <div class="row">
           <div class="col-md-6 copyright">
-            <p>© 2024 Organic. All rights reserved.</p>
+            <p>© 2024 FutBook. All rights reserved.</p>
           </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
-            <p>HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> </p>
-          </div>
-        </div>
+        
       </div>
     </div>
     <script src="{{ asset('frontend-assets/js/jquery-1.11.0.min.js') }}"></script>

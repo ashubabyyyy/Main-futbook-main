@@ -43,12 +43,13 @@ class HomeController extends Controller
             ->take(3)
             ->get();
 
-        // Statistics for hero section
-        $stats = [
-            'total_courts' => Court::where('status', 'active')->count(),
-            'active_players' => DB::table('users')->where('role', 'player')->count(),
-            'total_venues' => DB::table('venues')->where('status', 'active')->count(),
-        ];
+     
+
+$stats = [
+    'total_courts' => Venue::where('status', 'active')->count(),  // use Venue here instead of Court
+    'active_players' => DB::table('users')->where('role', 'player')->count(),
+    'total_venues' => DB::table('venues')->where('status', 'active')->count(),
+];
 
         return view('frontend.pages.home', compact(
             'availableCourts',
